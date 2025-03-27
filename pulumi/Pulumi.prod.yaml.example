@@ -1,0 +1,6 @@
+# secretsprovider: awskms://alias/YourPulumiKeyAlias?region=us-east-1
+# encryptedkey: (optional)
+config:
+  aws:region: us-east-1
+  pulumi:domain: yourdomain.com
+  pulumi:repository: https://github.com/your-org/your-repo

@@ -1,0 +1,6 @@
+{
+  "all": "mandatory",
+  "check-required-tags": {
+    "requiredTags": ["user:Organization", "user:Service", "user:Environment"]
+  }
+}

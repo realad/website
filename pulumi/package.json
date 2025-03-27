@@ -1,0 +1,15 @@
+{
+  "name": "pulumi",
+  "main": "index.ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "pulumi:up": "pulumi up",
+    "pulumi:preview": "pulumi preview"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^6.74.0",
+    "@pulumi/awsx": "^2.21.1",
+    "@pulumi/pulumi": "^3.159.0"
+  }
+}
