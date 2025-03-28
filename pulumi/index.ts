@@ -131,5 +131,79 @@ const domainAssociation = new aws.amplify.DomainAssociation(
   { dependsOn: [certValidation] },
 );
 
+const webAcl = new aws.wafv2.WebAcl('web-acl', {
+  defaultAction: {
+    allow: {},
+  },
+  scope: 'CLOUDFRONT',
+  description: website.id.apply(id => `WebACL for Amplify App ${id}`),
+  visibilityConfig: {
+    sampledRequestsEnabled: true,
+    cloudwatchMetricsEnabled: true,
+    metricName: 'web-acl',
+  },
+  rules: [
+    {
+      name: 'AWS-AWSManagedRulesAmazonIpReputationList',
+      priority: 0,
+      overrideAction: {
+        none: {},
+      },
+      statement: {
+        managedRuleGroupStatement: {
+          name: 'AWSManagedRulesAmazonIpReputationList',
+          vendorName: 'AWS',
+        },
+      },
+      visibilityConfig: {
+        sampledRequestsEnabled: true,
+        cloudwatchMetricsEnabled: true,
+        metricName: 'aws-managed-rules-amazon-ip-reputation-list',
+      },
+    },
+    {
+      name: 'AWS-AWSManagedRulesCommonRuleSet',
+      priority: 1,
+      overrideAction: {
+        none: {},
+      },
+      statement: {
+        managedRuleGroupStatement: {
+          name: 'AWSManagedRulesCommonRuleSet',
+          vendorName: 'AWS',
+        },
+      },
+      visibilityConfig: {
+        sampledRequestsEnabled: true,
+        cloudwatchMetricsEnabled: true,
+        metricName: 'aws-managed-rules-common-rule-set',
+      },
+    },
+    {
+      name: 'AWS-AWSManagedRulesKnownBadInputsRuleSet',
+      priority: 2,
+      overrideAction: {
+        none: {},
+      },
+      statement: {
+        managedRuleGroupStatement: {
+          name: 'AWSManagedRulesKnownBadInputsRuleSet',
+          vendorName: 'AWS',
+        },
+      },
+      visibilityConfig: {
+        sampledRequestsEnabled: true,
+        cloudwatchMetricsEnabled: true,
+        metricName: 'aws-managed-rules-known-bad-inputs-rule-set',
+      },
+    }
+  ],
+});
+
+const webAclAssociation = new aws.wafv2.WebAclAssociation('web-acl-association', {
+  resourceArn: website.arn,
+  webAclArn: webAcl.arn,
+});
+
 // Export the website URL.
 export const websiteDefaultDomain = website.defaultDomain;
