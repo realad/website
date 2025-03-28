@@ -2,8 +2,9 @@ import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
 import { registerAutoTags } from './autotag';
 
-const config = new pulumi.Config();
 const current = aws.getCallerIdentity({});
+const config = new pulumi.Config();
+const domain = config.require('domain');
 
 // Automatically inject tags.
 registerAutoTags({
@@ -60,12 +61,12 @@ const rolePolicyAttachment = new aws.iam.RolePolicyAttachment(
   }
 );
 
-const zone = new aws.route53.Zone('zone', { name: config.require('domain') }, { protect: true });
+const zone = new aws.route53.Zone('zone', { name: domain }, { protect: true });
 
 const cert = new aws.acm.Certificate('cert', {
-  domainName: config.require('domain'),
+  domainName: domain,
   validationMethod: 'DNS',
-  subjectAlternativeNames: [`www.${config.require('domain')}`],
+  subjectAlternativeNames: [`www.${domain}`],
 });
 
 const validationRecords = cert.domainValidationOptions.apply(options => {
@@ -98,8 +99,8 @@ const website = new aws.amplify.App(
     iamServiceRoleArn: role.arn,
     customRules: [
       {
-        source: "www.${domain}",
-        target: "${domain}",
+        source: `www.${domain}`,
+        target: domain,
         status: "301",
       },
     ],
