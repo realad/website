@@ -52,18 +52,19 @@ applications:
       phases:
         preBuild:
           commands:
-            - pnpm install
+            - npm install -g pnpm
+            - pnpm install --filter ./nextjs --prod
         build:
           commands:
-            - pnpm nextjs:build
+            - pnpm --filter ./nextjs build
       artifacts:
-        baseDirectory: nextjs/.next
+        baseDirectory: nextjs/.next/standalone
         files:
           - '**/*'
       cache:
         paths:
-          - nextjs/.next/cache/**/*
           - node_modules/**/*
+          - ~/.pnpm-store/**/*
       buildPath: /
     appRoot: "nextjs"`,
     enableAutoBranchCreation: true,
