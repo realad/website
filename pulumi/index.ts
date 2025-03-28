@@ -49,23 +49,19 @@ const website = new aws.amplify.App(
     buildSpec: `version: 1
 applications:
   - frontend:
+      buildPath: '/'
       phases:
         preBuild:
           commands:
             - npm install -g pnpm
-            - pnpm install --filter ./nextjs --prod
+            - pnpm install
         build:
           commands:
-            - pnpm --filter ./nextjs build
+            - pnpm nextjs:build
       artifacts:
-        baseDirectory: nextjs/.next/standalone
+        baseDirectory: nextjs/.next
         files:
           - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-          - ~/.pnpm-store/**/*
-      buildPath: /
     appRoot: "nextjs"`,
     enableAutoBranchCreation: true,
     autoBranchCreationPatterns: ['main', 'feature/*'],
@@ -97,6 +93,12 @@ applications:
     ignoreChanges: ['repository'],
   },
 );
+
+//
+// cache:
+// paths:
+//   - node_modules/**/*
+//   - ~/.pnpm-store/**/*
 
 const main = new aws.amplify.Branch('main', {
   appId: website.id,
