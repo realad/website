@@ -62,6 +62,9 @@ applications:
         baseDirectory: nextjs/.next
         files:
           - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
     appRoot: "nextjs"`,
     enableAutoBranchCreation: true,
     autoBranchCreationPatterns: ['main', 'feature/*'],
@@ -93,12 +96,6 @@ applications:
     ignoreChanges: ['repository'],
   },
 );
-
-//
-// cache:
-// paths:
-//   - node_modules/**/*
-//   - ~/.pnpm-store/**/*
 
 const main = new aws.amplify.Branch('main', {
   appId: website.id,
