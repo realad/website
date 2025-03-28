@@ -2,14 +2,63 @@ import * as pulumi from '@pulumi/pulumi';
 import * as aws from '@pulumi/aws';
 import { registerAutoTags } from './autotag';
 
-// Automatically inject tags.
 const config = new pulumi.Config();
+const current = aws.getCallerIdentity({});
 
+// Automatically inject tags.
 registerAutoTags({
   'user:Organization': config.require('organization'),
   'user:Service': pulumi.getProject(),
   'user:Environment': pulumi.getStack(),
 });
+
+const role = new aws.iam.Role("role", {
+  assumeRolePolicy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [
+      {
+        Action: "sts:AssumeRole",
+        Effect: "Allow",
+        Principal: {
+          Service: "amplify.amazonaws.com",
+        },
+      },
+    ],
+  }),
+});
+
+const policy = new aws.iam.Policy("policy", {
+  policy: current.then((current) =>
+    JSON.stringify({
+      Version: "2012-10-17",
+      Statement: [
+        {
+          Effect: "Allow",
+          Action: ["logs:CreateLogStream", "logs:PutLogEvents"],
+          Resource: `arn:aws:logs:eu-central-1:${current.accountId}:log-group:/aws/amplify/*:log-stream:*`,
+        },
+        {
+          Effect: "Allow",
+          Action: "logs:CreateLogGroup",
+          Resource: `arn:aws:logs:eu-central-1:${current.accountId}:log-group:/aws/amplify/*`,
+        },
+        {
+          Effect: "Allow",
+          Action: "logs:DescribeLogGroups",
+          Resource: `arn:aws:logs:eu-central-1:${current.accountId}:log-group:*`,
+        },
+      ],
+    })
+  ),
+});
+
+const rolePolicyAttachment = new aws.iam.RolePolicyAttachment(
+  "role-policy-attachment",
+  {
+    policyArn: policy.arn,
+    role: role.name,
+  }
+);
 
 const zone = new aws.route53.Zone('zone', { name: config.require('domain') }, { protect: true });
 
@@ -46,6 +95,14 @@ const website = new aws.amplify.App(
   {
     name: config.require('domain'),
     platform: 'WEB_COMPUTE',
+    iamServiceRoleArn: role.arn,
+    customRules: [
+      {
+        source: "www.${domain}",
+        target: "${domain}",
+        status: "301",
+      },
+    ],
     buildSpec: `version: 1
 applications:
   - frontend:
