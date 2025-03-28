@@ -1,0 +1,7 @@
+secretsprovider: awskms://alias/RealAdPulumiSecretsEncryptionKey?region=us-east-1&awssdk=v2&profile=realad-deployment
+encryptedkey: AQICAHg0eEeb50IKmIm9s2l7XoREvQM7pYa4hUWAPdOty99wPgHcfnAxs+rvk5/Ptj9o4CUvAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQM0QX5xzvoMWrUULkdAgEQgDvBfJsgyhakGVpLlyOr66VHIxSNIMSRi0wURrnNMWtUgmkc/UiPZ2XtgkVPa/AHvozx0Iyf8WD+ydYEBw==
+config:
+  aws:profile: realad
+  aws:region: us-east-1
+  pulumi:domain: realad.io
+  pulumi:repository: https://github.com/realad/website

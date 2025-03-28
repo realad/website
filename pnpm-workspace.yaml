@@ -1,0 +1,5 @@
+packages:
+  - 'pulumi'
+  - 'pulumi-policy'
+  - 'nextjs'
+  - '!**/test/**'

@@ -1,0 +1,28 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Website",
+  "workspaces": [
+    "pulumi",
+    "nextjs"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "pulumi:preview": "pnpm --filter pulumi pulumi:preview",
+    "pulumi:up": "pnpm --filter pulumi pulumi:up",
+    "nextjs:dev": "pnpm --filter nextjs dev",
+    "nextjs:build": "pnpm --filter nextjs build",
+    "nextjs:start": "pnpm --filter nextjs start",
+    "nextjs:lint": "pnpm --filter nextjs lint",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md}\""
+  },
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
+}

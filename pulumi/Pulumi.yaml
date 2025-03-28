@@ -1,0 +1,25 @@
+name: pulumi
+description: Infrastructure for the RealAd website
+runtime:
+  name: nodejs
+  options:
+    packagemanager: pnpm
+backend:
+  url: s3://realad-pulumi-state?region=us-east-1&awssdk=v2&profile=realad-deployment
+config:
+  pulumi:autonaming:
+    value:
+      pattern: ${project}-${stack}-${name}
+      enforce: true
+      providers:
+        aws:
+          resources:
+            "aws:s3/bucketV2:BucketV2":
+              pattern: ${project}-${stack}-${name}-${alphanum(6)}
+  pulumi:tags:
+    value:
+      project: "${project}"
+      stack: "${stack}"
+      pulumi:template: aws-typescript
+  organization:
+    value: realad
