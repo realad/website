@@ -8,9 +8,9 @@
     "nextjs"
   ],
   "devDependencies": {
-    "@types/node": "^22.13.14",
-    "prettier": "3.5.3",
-    "typescript": "^5.8.2"
+    "@types/node": "^22",
+    "prettier": "^3",
+    "typescript": "^5"
   },
   "scripts": {
     "pulumi:preview": "pnpm --filter pulumi pulumi:preview",

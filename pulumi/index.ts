@@ -196,7 +196,36 @@ const webAcl = new aws.wafv2.WebAcl('web-acl', {
         cloudwatchMetricsEnabled: true,
         metricName: 'aws-managed-rules-known-bad-inputs-rule-set',
       },
-    }
+    },
+    {
+      name: 'BlockAmplifyDomain',
+      priority: 3,
+      action: {
+        block: {},
+      },
+      statement: {
+        byteMatchStatement: {
+          searchString: 'amplifyapp.com',
+          fieldToMatch: {
+            singleHeader: {
+              name: 'host',
+            },
+          },
+          textTransformations: [
+            {
+              priority: 0,
+              type: 'NONE',
+            },
+          ],
+          positionalConstraint: 'ENDS_WITH',
+        },
+      },
+      visibilityConfig: {
+        sampledRequestsEnabled: true,
+        cloudwatchMetricsEnabled: true,
+        metricName: 'block-amplify-domain',
+      },
+    },
   ],
 });
 
