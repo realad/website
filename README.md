@@ -22,6 +22,25 @@ It also acts as a companion resource for Medium articles published by the RealAd
 
 ## 🛠️ Getting Started
 
+Copy and configure Pulumi stack files:
+
+```bash
+cd pulumi
+cp Pulumi.yaml.example Pulumi.yaml
+cp Pulumi.prod.yaml.example Pulumi.prod.yaml
+cd ..
+```
+
+Edit them with your values or configure via:
+
+```bash
+cd pulumi
+pulumi login s3://your-state-bucket
+pulumi config set aws:region us-east-1
+pulumi config set pulumi:domain yourdomain.com
+cd ..
+```
+
 Install dependencies:
 
 ```bash
