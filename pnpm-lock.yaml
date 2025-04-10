@@ -76,8 +76,8 @@ importers:
         specifier: ^2.21.1
         version: 2.21.1(typescript@5.8.2)
       '@pulumi/pulumi':
-        specifier: ^3.159.0
-        version: 3.159.0(typescript@5.8.2)
+        specifier: ^3.162.0
+        version: 3.162.0(typescript@5.8.2)
 
   pulumi-policy:
     dependencies:
@@ -88,8 +88,8 @@ importers:
         specifier: ^1.14.0
         version: 1.14.0(typescript@5.8.2)
       '@pulumi/pulumi':
-        specifier: ^3.159.0
-        version: 3.159.0(typescript@5.8.2)
+        specifier: ^3.162.0
+        version: 3.162.0(typescript@5.8.2)
 
 packages:
 
@@ -660,8 +660,8 @@ packages:
   '@pulumi/policy@1.14.0':
     resolution: {integrity: sha512-GWTqW43dU/Qy3fsuWpDZk/loNVSp4P+YLb/s7zQraXZdQl5wJWzZCEKwqe+eS5ggbsTGDwb2QKcHDip9mq1PzQ==}
 
-  '@pulumi/pulumi@3.159.0':
-    resolution: {integrity: sha512-ochBFHh8ZePwDwxPKx1IBsDPZ4h2Q1HB7pfh8sKhP8OEpQD+TASLGT7fE015B5kjeHRlwCusyNSexKXDByl0FQ==}
+  '@pulumi/pulumi@3.162.0':
+    resolution: {integrity: sha512-ON76DuSgOCv1JRNX4pc9YiNyGF+hXY0QNx8/wwhKinYHkSgD3h61XJM6y7hsXX4gCbgCqRn/3l7XGk8ChFLNVQ==}
     engines: {node: '>=18'}
     peerDependencies:
       ts-node: '>= 7.0.1 < 12'
@@ -671,9 +671,6 @@ packages:
         optional: true
       typescript:
         optional: true
-
-  '@pulumi/query@0.3.0':
-    resolution: {integrity: sha512-xfo+yLRM2zVjVEA4p23IjQWzyWl1ZhWOGobsBqRpIarzLvwNH/RAGaoehdxlhx4X92302DrpdIFgTICMN4P38w==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1007,6 +1004,9 @@ packages:
 
   '@types/node@22.13.14':
     resolution: {integrity: sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==}
+
+  '@types/node@22.14.0':
+    resolution: {integrity: sha512-Kmpl+z84ILoG+3T/zQFyAJsU6EPTmOCj8/2+83fSN6djd6I4o7uOuGIH6vq3PrjY5BGitSbFuMN18j3iknubbA==}
 
   '@types/react-dom@19.0.4':
     resolution: {integrity: sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==}
@@ -2932,6 +2932,9 @@ packages:
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
   unique-filename@3.0.0:
     resolution: {integrity: sha512-afXhuC55wkAmZ0P18QsVE6kp8JaxrEokN2HGIoIVv2ijHQd419H0+6EigAFcIzXeMIkcIkNBpB3L/DXB3cTS/g==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -3848,7 +3851,7 @@ snapshots:
 
   '@pulumi/aws@6.74.0(typescript@5.8.2)':
     dependencies:
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
       mime: 2.6.0
     transitivePeerDependencies:
       - bluebird
@@ -3862,7 +3865,7 @@ snapshots:
       '@pulumi/aws': 6.74.0(typescript@5.8.2)
       '@pulumi/docker': 4.6.2(typescript@5.8.2)
       '@pulumi/docker-build': 0.0.8(typescript@5.8.2)
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
       '@types/aws-lambda': 8.10.148
       docker-classic: '@pulumi/docker@3.6.1(typescript@5.8.2)'
       mime: 2.6.0
@@ -3875,7 +3878,7 @@ snapshots:
 
   '@pulumi/docker-build@0.0.8(typescript@5.8.2)':
     dependencies:
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
     transitivePeerDependencies:
       - bluebird
       - supports-color
@@ -3884,7 +3887,7 @@ snapshots:
 
   '@pulumi/docker@3.6.1(typescript@5.8.2)':
     dependencies:
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -3894,7 +3897,7 @@ snapshots:
 
   '@pulumi/docker@4.6.2(typescript@5.8.2)':
     dependencies:
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
       semver: 5.7.2
     transitivePeerDependencies:
       - bluebird
@@ -3905,7 +3908,7 @@ snapshots:
   '@pulumi/policy@1.14.0(typescript@5.8.2)':
     dependencies:
       '@grpc/grpc-js': 1.13.2
-      '@pulumi/pulumi': 3.159.0(typescript@5.8.2)
+      '@pulumi/pulumi': 3.162.0(typescript@5.8.2)
       google-protobuf: 3.21.4
       protobufjs: 7.4.0
     transitivePeerDependencies:
@@ -3914,7 +3917,7 @@ snapshots:
       - ts-node
       - typescript
 
-  '@pulumi/pulumi@3.159.0(typescript@5.8.2)':
+  '@pulumi/pulumi@3.162.0(typescript@5.8.2)':
     dependencies:
       '@grpc/grpc-js': 1.13.2
       '@logdna/tail-file': 2.2.0
@@ -3926,7 +3929,6 @@ snapshots:
       '@opentelemetry/resources': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.30.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-node': 1.30.1(@opentelemetry/api@1.9.0)
-      '@pulumi/query': 0.3.0
       '@types/google-protobuf': 3.15.12
       '@types/semver': 7.7.0
       '@types/tmp': 0.2.6
@@ -3950,8 +3952,6 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
       - supports-color
-
-  '@pulumi/query@0.3.0': {}
 
   '@rtsao/scc@1.1.0': {}
 
@@ -4354,7 +4354,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.13.14
+      '@types/node': 22.14.0
       '@types/responselike': 1.0.3
 
   '@types/estree@1.0.7': {}
@@ -4369,7 +4369,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.13.14
+      '@types/node': 22.14.0
 
   '@types/node@20.17.28':
     dependencies:
@@ -4378,6 +4378,10 @@ snapshots:
   '@types/node@22.13.14':
     dependencies:
       undici-types: 6.20.0
+
+  '@types/node@22.14.0':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/react-dom@19.0.4(@types/react@19.0.12)':
     dependencies:
@@ -4389,7 +4393,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.13.14
+      '@types/node': 22.14.0
 
   '@types/semver@7.7.0': {}
 
@@ -6589,6 +6593,8 @@ snapshots:
   undici-types@6.19.8: {}
 
   undici-types@6.20.0: {}
+
+  undici-types@6.21.0: {}
 
   unique-filename@3.0.0:
     dependencies:
