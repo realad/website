@@ -29,7 +29,7 @@ export default function AboutPage() {
       {/* ── Hero ── */}
       <section className="hero-grid py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight text-pretty">
             Built by an engineer, for engineering teams
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-slate-300 max-w-2xl">
@@ -41,7 +41,7 @@ export default function AboutPage() {
       {/* ── Company Story ── */}
       <section className="py-20 lg:py-28 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Why RealAd exists</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Why RealAd exists</h2>
           <div className="mt-8 max-w-3xl space-y-4 text-lg text-slate-300">
             <p>
               RealAd was founded on a simple observation: startups don&apos;t need a full-time DevOps team — they need
@@ -68,7 +68,7 @@ export default function AboutPage() {
       {/* ── Methodology ── */}
       <section className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">How we think about infrastructure</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">How we think about infrastructure</h2>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-3">
             <div className="p-6 lg:p-8 rounded-xl border border-slate-800 bg-slate-900/50">
@@ -101,7 +101,7 @@ export default function AboutPage() {
       {/* ── Technology ── */}
       <section className="py-20 lg:py-28 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Technology</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Technology</h2>
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {TECH.map(group => (

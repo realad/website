@@ -102,7 +102,7 @@ export default function ServicesPage() {
       {/* ── Hero ── */}
       <section className="hero-grid py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight text-pretty">
             Infrastructure services for companies that ship
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-slate-300 max-w-2xl">
@@ -115,7 +115,9 @@ export default function ServicesPage() {
       {/* ── Service 1: Rescue ── */}
       <section id="rescue" className="py-20 lg:py-28 border-t border-slate-800 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Infrastructure Rescue &amp; Stabilization</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">
+            Infrastructure Rescue &amp; Stabilization
+          </h2>
 
           <p className="mt-6 text-lg text-slate-300 max-w-3xl">
             Your previous DevOps engineer left. Or your infrastructure was built fast and never optimized. Deployments
@@ -188,7 +190,7 @@ export default function ServicesPage() {
       {/* ── Service 2: Compliance ── */}
       <section id="compliance" className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Compliance Acceleration</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Compliance Acceleration</h2>
 
           <p className="mt-6 text-lg text-slate-300 max-w-3xl">
             Your enterprise prospect requires SOC2. NIS2 is mandatory for 160,000+ EU organizations. DORA applies to
@@ -262,7 +264,7 @@ export default function ServicesPage() {
       {/* ── Service 3: Partnership ── */}
       <section id="partnership" className="py-20 lg:py-28 border-t border-slate-800 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Ongoing Infrastructure Partnership</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Ongoing Infrastructure Partnership</h2>
 
           <p className="mt-6 text-lg text-slate-300 max-w-3xl">
             You don&apos;t need a full-time DevOps engineer. You need an experienced architect who knows your stack,
@@ -332,7 +334,7 @@ export default function ServicesPage() {
       {/* ── Comparison Table ── */}
       <section className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Choose your starting point</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Choose your starting point</h2>
 
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-left text-sm min-w-[640px]">

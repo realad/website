@@ -25,7 +25,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="hero-grid relative py-24 lg:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight text-pretty">
             Your infrastructure is on fire.
             <br />
             We&apos;ve rescued startups exactly like yours.
@@ -66,7 +66,7 @@ export default function Home() {
       {/* ── Problem Recognition Triggers ── */}
       <section className="py-20 lg:py-28 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Which of these sounds like you?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Which of these sounds like you?</h2>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
             <div className="border-l-2 border-teal-500 pl-6">
@@ -118,7 +118,7 @@ export default function Home() {
       {/* ── Services Preview ── */}
       <section className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Three ways we help</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Three ways we help</h2>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-3">
             <div className="p-6 lg:p-8 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-teal-500/50 transition-colors">
@@ -172,7 +172,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
             {PROOF_POINTS.map(p => (
               <div key={p.label} className="text-center">
-                <p className="text-3xl lg:text-4xl font-bold text-white">{p.value}</p>
+                <p className="text-3xl lg:text-4xl font-bold text-white text-pretty">{p.value}</p>
                 <p className="mt-1 text-sm text-slate-400">{p.label}</p>
               </div>
             ))}
@@ -183,7 +183,9 @@ export default function Home() {
       {/* ── How We Work ── */}
       <section className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">From crisis to confidence in three steps</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">
+            From crisis to confidence in three steps
+          </h2>
 
           <div className="mt-12 grid gap-12 lg:grid-cols-3">
             <div>

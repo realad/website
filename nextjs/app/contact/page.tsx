@@ -102,7 +102,7 @@ export default function ContactPage() {
       {/* ── Hero ── */}
       <section className="hero-grid py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight text-pretty">
             Let&apos;s talk about your infrastructure
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-slate-300 max-w-2xl">
@@ -159,7 +159,7 @@ export default function ContactPage() {
       {/* ── FAQ ── */}
       <section className="py-20 lg:py-28 bg-slate-900/30 border-t border-slate-800">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">Frequently asked questions</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white text-pretty">Frequently asked questions</h2>
 
           <div className="mt-10 divide-y divide-slate-800">
             {FAQ_ITEMS.map(item => (

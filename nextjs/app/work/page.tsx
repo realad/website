@@ -37,7 +37,7 @@ export default function WorkPage() {
       {/* ── Hero ── */}
       <section className="hero-grid py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight text-pretty">
             Infrastructure problems we&apos;ve solved
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-slate-300 max-w-2xl">
@@ -62,7 +62,7 @@ export default function WorkPage() {
 
             {/* Content */}
             <div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white text-pretty">
                 90+ Findings Resolved — B2B Platform Rescued in 8 Weeks
               </h2>
 
@@ -138,7 +138,7 @@ export default function WorkPage() {
             </aside>
 
             <div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white text-pretty">
                 Sub-100ms Latency, Zero Downtime — Real-Time Platform Rescued and Running
               </h2>
 
@@ -218,7 +218,7 @@ export default function WorkPage() {
             </aside>
 
             <div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-white">
+              <h2 className="text-2xl lg:text-3xl font-bold text-white text-pretty">
                 From Monolith to 130K Concurrent Users — Zero Downtime During Live Events
               </h2>
 
