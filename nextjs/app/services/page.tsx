@@ -166,7 +166,7 @@ export default function ServicesPage() {
 
           <div className="mt-10 p-6 rounded-xl border border-slate-800 bg-slate-900/50 max-w-3xl">
             <p className="text-slate-200 italic">
-              &ldquo;In a recent engagement, our infrastructure audit uncovered 80+ findings — including critical
+              &ldquo;In a recent engagement, our infrastructure audit uncovered 90+ findings — including critical
               security gaps and performance bottlenecks. Within 8 weeks, the team had a clear remediation roadmap and
               measurable performance improvements across the board.&rdquo;
             </p>

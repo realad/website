@@ -2,19 +2,19 @@ import Link from 'next/link';
 import { CTADiscovery } from '@/components/cta';
 
 const TRUST = [
-  '10+ years cloud infrastructure',
+  '11+ years in cloud infrastructure',
   'Every second client is a rescue',
-  '24+ months longest partnership',
+  '2+ years longest active partnership',
   'SOC2 · ISO 27001 · HIPAA delivered',
 ];
 
 const PROOF_POINTS = [
-  { value: '80+', label: 'Infrastructure findings in a single audit' },
-  { value: '30%', label: 'Reduction in API latency after optimization' },
+  { value: '90+', label: 'Infrastructure findings in a single audit' },
+  { value: '35%', label: 'Reduction in API latency after optimization' },
   { value: '130K', label: 'Concurrent users handled at peak load' },
   { value: '<100ms', label: 'Latency SLA on real-time systems' },
-  { value: '10+', label: 'Years of cloud infrastructure experience' },
-  { value: '6', label: 'Industries served across 3 continents' },
+  { value: '11+', label: 'Years of cloud infrastructure experience' },
+  { value: 'Zero', label: 'Downtime during managed transitions' },
 ];
 
 const INDUSTRIES = ['FinTech', 'HealthTech', 'SaaS / B2B', 'AI / ML Infrastructure', 'InsurTech', 'VoIP / Telecom'];
