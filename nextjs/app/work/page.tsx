@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Case Studies | RealAd',
     description:
-      '91 audit findings resolved. 35% latency reduction. 130K concurrent users. Real infrastructure results.',
+      '80+ audit findings resolved. 30% latency improvement. 130K concurrent users. Real infrastructure results.',
     images: [{ url: '/og-case-studies.png', width: 1200, height: 630 }],
   },
 };
@@ -53,26 +53,25 @@ export default function WorkPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10">
             {/* Sidebar */}
             <aside className="space-y-4 lg:border-r lg:border-slate-800 lg:pr-8">
-              <MetaItem label="Industry" value="Healthcare / Automation" />
+              <MetaItem label="Industry" value="HealthTech" />
               <MetaItem label="Region" value="Europe" />
-              <MetaItem label="Stack" value="AWS (ECS Fargate, RDS, DynamoDB), Terraform, Python" />
+              <MetaItem label="Stack" value="AWS (ECS, RDS), Terraform, CI/CD" />
               <MetaItem label="Timeline" value="Ongoing (started with 2-month rescue)" />
-              <MetaItem label="Entry point" value="Infrastructure audit after predecessor left" />
+              <MetaItem label="Entry point" value="Infrastructure audit after team transition" />
             </aside>
 
             {/* Content */}
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-white">
-                91 Findings, 35% Latency Drop — Healthcare Platform Rescued in 8 Weeks
+                80+ Findings Resolved — HealthTech Platform Rescued in 8 Weeks
               </h2>
 
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-white">The situation</h3>
                 <p className="mt-3 text-slate-300">
-                  A European healthcare automation platform serving hospital networks had grown faster than its
-                  infrastructure could support. The original DevOps setup was functional but unaudited — no IaC,
-                  inconsistent environments, no compliance documentation, and mounting performance complaints from
-                  hospital clients.
+                  A European healthtech company had grown faster than its infrastructure could support. The original
+                  DevOps setup was functional but unaudited — no IaC, inconsistent environments, no compliance
+                  documentation, and mounting performance complaints from enterprise clients.
                 </p>
                 <p className="mt-3 text-slate-300">
                   The founding team needed someone who could assess the full picture, prioritize what mattered, and fix
@@ -87,18 +86,16 @@ export default function WorkPage() {
                     <p className="text-sm font-medium text-teal-500">Week 1–2: Comprehensive infrastructure audit</p>
                     <p className="text-slate-300 mt-1">
                       Mapped all AWS resources, networking topology, deployment pipeline. Profiled application
-                      performance (API latency, database queries, ECS task sizing). Assessed security posture against
-                      ISO 27001 and SOC2 requirements. Delivered written report: 91 total findings, 27 classified as
-                      critical.
+                      performance (API latency, database queries, compute sizing). Assessed security posture against
+                      compliance requirements. Delivered written report: 80+ total findings, prioritized by severity.
                     </p>
                   </div>
                   <div className="pl-4 border-l border-slate-700">
                     <p className="text-sm font-medium text-teal-500">Week 3–8: Stabilization and remediation</p>
                     <p className="text-slate-300 mt-1">
                       Re-architected deployment on ECS Fargate with multi-AZ VPCs. Implemented full IaC with Terraform —
-                      RDS, DynamoDB, ECS, networking, CloudFront. Established Site-to-Site VPN for secure hospital
-                      network connectivity. Integrated Checkov for policy-as-code scanning in CI/CD pipeline. Set up
-                      Vanta ISMS for ongoing ISO 27001 compliance tracking.
+                      compute, databases, networking, CDN. Integrated policy-as-code scanning into CI/CD pipeline. Set
+                      up compliance management platform for ongoing security posture tracking.
                     </p>
                   </div>
                   <div className="pl-4 border-l border-slate-700">
@@ -114,12 +111,10 @@ export default function WorkPage() {
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-white">Results</h3>
                 <ul className="mt-4 space-y-3">
-                  <ResultItem>91 findings catalogued → remediation roadmap with clear priorities</ResultItem>
-                  <ResultItem>
-                    35% reduction in p95 API response time (ECS task sizing + RDS query optimization)
-                  </ResultItem>
+                  <ResultItem>80+ findings catalogued → remediation roadmap with clear priorities</ResultItem>
+                  <ResultItem>30% reduction in API response times after compute and query optimization</ResultItem>
                   <ResultItem>Full infrastructure-as-code — reproducible, auditable, version-controlled</ResultItem>
-                  <ResultItem>ISO 27001 and SOC2 compliance controls implemented</ResultItem>
+                  <ResultItem>Compliance controls implemented and verified</ResultItem>
                   <ResultItem>
                     Team went from &ldquo;firefighting infra&rdquo; to &ldquo;shipping features&rdquo;
                   </ResultItem>
@@ -135,29 +130,29 @@ export default function WorkPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10">
             <aside className="space-y-4 lg:border-r lg:border-slate-800 lg:pr-8">
-              <MetaItem label="Industry" value="VoIP / AI / Logistics" />
-              <MetaItem label="Region" value="United States" />
-              <MetaItem label="Stack" value="AWS (EKS, multi-account), Pulumi, Terragrunt, NATS.io" />
+              <MetaItem label="Industry" value="Enterprise Communications" />
+              <MetaItem label="Region" value="North America" />
+              <MetaItem label="Stack" value="AWS (EKS, multi-account), IaC (multiple tools)" />
               <MetaItem label="Timeline" value="12+ months" />
               <MetaItem label="Entry point" value="Rescue after infrastructure instability" />
             </aside>
 
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-white">
-                Sub-100ms Latency, Zero Downtime — Real-Time VoIP Rescued and Running for 12+ Months
+                Sub-100ms Latency, Zero Downtime — Real-Time Platform Rescued and Running
               </h2>
 
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-white">The situation</h3>
                 <p className="mt-3 text-slate-300">
-                  An AI-powered voice platform serving the freight logistics industry was struggling with infrastructure
-                  reliability. Real-time VoIP workloads have zero tolerance for latency — a 50ms delay means users hear
-                  it. The existing infrastructure was built quickly and needed an experienced architect to make it
-                  production-grade.
+                  A real-time communications platform processing enterprise voice traffic was struggling with
+                  infrastructure reliability. Real-time voice workloads have zero tolerance for latency — a 50ms delay
+                  means users hear it. The existing infrastructure was built quickly and needed an experienced architect
+                  to make it production-grade.
                 </p>
                 <p className="mt-3 text-slate-300">
-                  The challenge: stateful, latency-sensitive workloads on Kubernetes, with multi-account AWS spanning 8
-                  accounts, and a mix of IaC tools.
+                  The challenge: stateful, latency-sensitive workloads on Kubernetes, with multi-account AWS and a mix
+                  of IaC tools.
                 </p>
               </div>
 
@@ -170,11 +165,11 @@ export default function WorkPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-teal-500 shrink-0">→</span>
-                    Moved latency-critical VoIP/SIP stack to dedicated EC2 with session affinity
+                    Moved latency-critical voice stack to dedicated EC2 with session affinity
                   </li>
                   <li className="flex gap-3">
                     <span className="text-teal-500 shrink-0">→</span>
-                    Implemented IaC: Pulumi (TypeScript) for EKS, Terragrunt for AWS services
+                    Unified infrastructure-as-code across multiple tools and environments
                   </li>
                   <li className="flex gap-3">
                     <span className="text-teal-500 shrink-0">→</span>
@@ -186,11 +181,11 @@ export default function WorkPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-teal-500 shrink-0">→</span>
-                    Managed 8 AWS accounts with consistent Terraform/Terragrunt patterns
+                    Managed multi-account AWS environment with consistent IaC patterns
                   </li>
                   <li className="flex gap-3">
                     <span className="text-teal-500 shrink-0">→</span>
-                    SIP protocol optimization and security hardening
+                    Protocol optimization and security hardening
                   </li>
                 </ul>
               </div>
@@ -199,8 +194,8 @@ export default function WorkPage() {
                 <h3 className="text-lg font-semibold text-white">Results</h3>
                 <ul className="mt-4 space-y-3">
                   <ResultItem>Sub-100ms latency SLA maintained consistently</ResultItem>
-                  <ResultItem>Zero-downtime deployments for stateful VoIP workloads</ResultItem>
-                  <ResultItem>8 AWS accounts managed with unified IaC</ResultItem>
+                  <ResultItem>Zero-downtime deployments for stateful real-time workloads</ResultItem>
+                  <ResultItem>Multi-account AWS managed with unified IaC</ResultItem>
                   <ResultItem>Full observability stack — from infrastructure to application traces</ResultItem>
                   <ResultItem>Transitioned to low-overhead maintenance retainer</ResultItem>
                 </ul>
@@ -215,8 +210,8 @@ export default function WorkPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10">
             <aside className="space-y-4 lg:border-r lg:border-slate-800 lg:pr-8">
-              <MetaItem label="Industry" value="Retail / Promotions" />
-              <MetaItem label="Region" value="Americas (Mexico, global)" />
+              <MetaItem label="Industry" value="Retail / Events" />
+              <MetaItem label="Region" value="Global" />
               <MetaItem label="Stack" value="AWS (EKS, CloudFront), Kubernetes, Redis, Java" />
               <MetaItem label="Timeline" value="12 months" />
               <MetaItem label="Entry point" value="Migration from monolith to microservices" />
@@ -224,16 +219,16 @@ export default function WorkPage() {
 
             <div>
               <h2 className="text-2xl lg:text-3xl font-bold text-white">
-                From Monolith to 130K Concurrent Users — Zero Downtime During Live F1 Events
+                From Monolith to 130K Concurrent Users — Zero Downtime During Live Events
               </h2>
 
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-white">The situation</h3>
                 <p className="mt-3 text-slate-300">
-                  A multi-tenant promotional platform serving one of the largest retail chains in the Americas (20,000+
-                  stores) needed to handle massive traffic spikes during live events — including a flagship Formula 1
-                  partnership campaign. The existing monolithic architecture couldn&apos;t scale, and any downtime
-                  during a live event meant direct revenue loss and brand damage.
+                  A multi-tenant promotional platform serving a major international retailer needed to handle massive
+                  traffic spikes during live brand partnership events. The existing monolithic architecture
+                  couldn&apos;t scale, and any downtime during a live campaign meant direct revenue loss and brand
+                  damage.
                 </p>
               </div>
 
@@ -271,7 +266,7 @@ export default function WorkPage() {
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-white">Results</h3>
                 <ul className="mt-4 space-y-3">
-                  <ResultItem>130K+ concurrent users handled during peak F1 events</ResultItem>
+                  <ResultItem>130K+ concurrent users handled during peak live events</ResultItem>
                   <ResultItem>Zero downtime during live promotional campaigns</ResultItem>
                   <ResultItem>Successful migration from monolith to microservices under production load</ResultItem>
                   <ResultItem>Cost-optimized with spot instances for non-critical workloads</ResultItem>

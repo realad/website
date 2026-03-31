@@ -166,8 +166,9 @@ export default function ServicesPage() {
 
           <div className="mt-10 p-6 rounded-xl border border-slate-800 bg-slate-900/50 max-w-3xl">
             <p className="text-slate-200 italic">
-              &ldquo;In a recent healthcare platform engagement, our initial audit uncovered 91 findings — 27 critical.
-              Within 8 weeks, the team had a clear remediation roadmap and p95 API response times dropped by 35%.&rdquo;
+              &ldquo;In a recent engagement, our infrastructure audit uncovered 80+ findings — including critical
+              security gaps and performance bottlenecks. Within 8 weeks, the team had a clear remediation roadmap and
+              measurable performance improvements across the board.&rdquo;
             </p>
           </div>
 
@@ -320,9 +321,9 @@ export default function ServicesPage() {
 
           <div className="mt-10 p-6 rounded-xl border border-slate-800 bg-slate-900/50 max-w-3xl">
             <p className="text-slate-200 italic">
-              &ldquo;One of our long-running partnerships: an AI-powered VoIP platform with sub-100ms latency
-              requirements. Infrastructure runs on Kubernetes (EKS) with multi-account AWS — maintained at minimal
-              overhead while the engineering team focuses entirely on product.&rdquo;
+              &ldquo;One of our long-running partnerships: a real-time communications platform with strict latency
+              requirements. Infrastructure runs on Kubernetes with multi-account AWS — maintained at minimal overhead
+              while the engineering team focuses entirely on product.&rdquo;
             </p>
           </div>
         </div>

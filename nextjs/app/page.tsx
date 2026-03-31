@@ -2,19 +2,19 @@ import Link from 'next/link';
 import { CTADiscovery } from '@/components/cta';
 
 const TRUST = [
-  '11 years AWS expertise',
-  '5 infrastructure rescues',
-  '100% retainer renewal',
-  'NIS2 / SOC2 / ISO 27001 implemented',
+  '10+ years cloud infrastructure',
+  'Every second client is a rescue',
+  '24+ months longest partnership',
+  'SOC2 · ISO 27001 · HIPAA delivered',
 ];
 
 const PROOF_POINTS = [
-  { value: '91', label: 'Infrastructure findings in a single audit' },
-  { value: '35%', label: 'Reduction in p95 API response time' },
-  { value: '130K', label: 'Concurrent users at peak load' },
+  { value: '80+', label: 'Infrastructure findings in a single audit' },
+  { value: '30%', label: 'Reduction in API latency after optimization' },
+  { value: '130K', label: 'Concurrent users handled at peak load' },
   { value: '<100ms', label: 'Latency SLA on real-time systems' },
-  { value: '11+', label: 'Years of cloud infrastructure experience' },
-  { value: '5', label: 'Compliance frameworks implemented' },
+  { value: '10+', label: 'Years of cloud infrastructure experience' },
+  { value: '6', label: 'Industries served across 3 continents' },
 ];
 
 const INDUSTRIES = ['FinTech', 'HealthTech', 'SaaS / B2B', 'AI / ML Infrastructure', 'InsurTech', 'VoIP / Telecom'];
@@ -28,7 +28,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white max-w-3xl leading-tight">
             Your infrastructure is on fire.
             <br />
-            We&apos;ve rescued 5 exactly like yours.
+            We&apos;ve rescued startups exactly like yours.
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-slate-300 max-w-2xl">
             For CTOs at Series A–C startups whose cloud infrastructure needs rescue, compliance implementation, or an
