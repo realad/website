@@ -4,7 +4,7 @@ import { CTADiscovery } from '@/components/cta';
 const TRUST = [
   '11+ years in cloud infrastructure',
   'Every second client is a rescue',
-  '2+ years longest active partnership',
+  'Avg. client relationship: 18+ months',
   'SOC2 · ISO 27001 · HIPAA delivered',
 ];
 
